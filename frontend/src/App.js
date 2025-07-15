@@ -3,6 +3,7 @@ import './App.css';
 
 const API_BASE_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
 
+
 function App() {
   const [user, setUser] = useState(null);
   const [currentView, setCurrentView] = useState('login');
@@ -15,6 +16,7 @@ function App() {
       fetchCurrentUser();
     }
   }, [token]);
+
 
   const fetchCurrentUser = async () => {
     try {
